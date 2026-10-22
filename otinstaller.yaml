@@ -24,7 +24,7 @@ outputs:
 runtime:
   kind: docker
   # Filled in by the release workflow with the pushed image's digest.
-  image: ghcr.io/osintverse-community/puredns@sha256:0000000000000000000000000000000000000000000000000000000000000000
+  image: ghcr.io/osintverse-community/puredns@sha256:9bc6e15789afca8026038b818afa3ed02597a72b1b3bfa161cd7a48a9df473a6
   platforms: [linux/amd64, linux/arm64]
   command: ["puredns", "bruteforce", "/opt/puredns/subdomains-top5000.txt", "{domain}", "-r", "/opt/puredns/resolvers.txt", "--rate-limit", "{rate_limit}", "-q"]
   output_format: text
